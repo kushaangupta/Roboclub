@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Kushaan's WebVR - That Final Track </title>
+    <script src="aframe.js"></script>
+  </head>
+  <body>
+    <a-scene>
+        <a-assets>
+            <video muted id="M5" src="t-hawk.mp4" loop="true"></video>
+            <audio id="A" src="Alive.mp3" loop="true"></audio>
+            <img id="pat" src="25P1geh.png">
+        </a-assets>
+        
+        <a-camera position="0 0 -8"></a-camera>
+        
+        <a-sky src="sky.jpg"></a-sky>
+        
+        <a-entity position="0 0 0"
+        geometry="primitive: plane; width: 100; height: 100;" rotation="-90 0 0"
+        material="src: #pat; repeat: 100 100; transparent: true;metalness:0.6; roughness: 0.4; sphericalEnvMap: #sky;"></a-entity>
+        
+        <a-plane color="#070505" position="0 0 0" height="100" width="100" rotation="-90 0 0"></a-plane>
+        
+        <a-plane color="#FFF" position="0 4 5" height="14.059" width="24.994" rotation="0 180 0">
+            <a-video src="#M5" height="14.059" width="24.994" autoplay="true"></a-video>
+        </a-plane> //mainVisualDisplay
+        
+        <a-plane color="#001" height="14.059"  width="24.994" position="12.497 4.0295 -7.497" rotation="0 -90 0">
+        </a-plane>
+        
+        <a-cylinder position="11 1 0.5" height="2" radius="0.5"></a-cylinder>
+        
+        <a-cylinder position="-11 1 0.5" height="2" radius="0.5"></a-cylinder>
+        
+        <a-cylinder position="11 1 -18" height="2" radius="0.5"></a-cylinder>
+        
+        <a-cylinder position="-11 1 -18" height="2" radius="0.5"></a-cylinder>
+        
+        <a-plane color="#001" height="14.059"  width="24.994" position="-12.497 4.0295 -7.497" rotation="0 90 0"></a-plane>
+        
+        <a-plane color="#001" position="0 4 -19.994" height="14.059" width="24.994" rotation="0 0 0"></a-plane>
+        
+        <a-plane color="#111" position="0 11.059 -7.497" height="24.994" width="24.994" rotation="90 0 0"></a-plane>
+        
+        <a-box color="#000" position="0 0 -0.5" scale="8.331 2 0.5">
+        </a-box> //mainStage
+        
+        <a-cylinder color="#AAA" position="-0.3 0 -0.5" height="2.01" radius="0.2"></a-cylinder>
+        
+        <a-cylinder color="#CCC" position="-0.6 0 -0.5" height="2.05" radius="0.02"></a-cylinder>
+        
+        <a-cylinder color="#CCC" position="-0.6 0 -0.58" height="2.05" radius="0.02"></a-cylinder>
+        
+        <a-cylinder color="#CCC" position="-0.6 0 -0.42" height="2.05" radius="0.02"></a-cylinder>
+        
+        <a-box color="#555" position="0 0 -0.5" scale="0.018 2 0.2"></a-box>
+        
+        <a-box color="#999" position="0 0 -0.6" scale="0.05 2.03 0.015"></a-box>
+        
+        <a-box color="#555" position="0.1 0 -0.5" scale="0.018 2 0.2"></a-box>
+        
+        <a-box color="#999" position="0.1 0 -0.5" scale="0.05 2.03 0.015"></a-box>
+        
+        <a-entity position="0 1 -8">
+        <img src="TextVR.png"></a-entity>
+        
+        <a-sound src="#A" autoplay="true" position="0 0 0" loop="true"></a-sound> //theTrack
+        
+        <a-plane color="#FFF" position="0 3.8 -19.994" height="12.5" width="1.5" rotation="0 0 45"></a-plane>
+        
+        <a-plane color="#FFF" position="0 3.8 -19.994" height="12.5" width="1.5" rotation="0 0 -45"></a-plane>
+                
+        //it'sTheDJ
+        <a-box color="#13A" position="0 0.25 0" scale="0.1 0.5 0.1">
+            <a-animation attribute="position" to="0 0.40 0" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //rightLeg
+        
+        <a-box color="#13A" position="-0.3 0.25 0" scale="0.1 0.5 0.1">
+            <a-animation attribute="position" to="-0.3 0.40 0" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //leftLeg
+        
+        <a-box color="#13A" position="-0.15 0.6 0" scale="0.4 0.2 0.1">
+            <a-animation attribute="position" to="-0.15 0.75 0" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //groin
+        
+        <a-box color="#AAA" position="-0.15 0.95 0" scale="0.4 0.5 0.1">
+            <a-animation attribute="position" to="-0.15 1.10 0" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //torso
+        
+        <a-box color="#AAA" position="-0.15 1.25 0" scale="0.1 0.1 0.1">
+            <a-animation attribute="position" to="-0.15 1.40 0" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //neck
+        
+        <a-box color="#AAA" position="-0.15 1.35 0" scale="0.3 0.2 0.1">
+            <a-animation attribute="position" to="-0.15 1.50 0" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //head
+        
+        <a-box color="#000" position="-0.15 1.455 0" scale="0.32 0.01 0.05">
+            <a-animation attribute="position" to="-0.15 1.605 0" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //headphonesp1
+        
+        <a-box color="#000" position="0.009 1.4 0" scale="0.003 0.1 0.05">
+            <a-animation attribute="position" to="0.009 1.55 0" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //headphonesp2
+        
+        <a-box color="#000" position="-0.3099 1.4 0" scale="0.003 0.1 0.05">
+            <a-animation attribute="position" to="-0.3099 1.55 0" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //headphonesp3
+        
+        <a-cylinder color="#000" position="-0.31 1.35 0" height="0.03" radius="0.05" rotation="0 0 90">
+            <a-animation attribute="position" to="-0.31 1.50 0" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-cylinder> //headphonesp4
+        
+        <a-cylinder color="#000" position="0.008 1.35 0" height="0.03" radius="0.05" rotation="0 0 90">
+            <a-animation attribute="position" to="0.008 1.50 0" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-cylinder> //headphonesp5
+        
+        <a-box color="#AAA" position="-0.4 1.089 -0.12" scale="0.1 0.4 0.1" rotation="70 0 -0">
+            <a-animation attribute="rotation" to="40 0 -0" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+            <a-animation attribute="position" to="-0.4 1.159 -0.12" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //leftArm
+        
+        <a-box color="#AAA" position="0.1 1.35 0" scale="0.1 0.4 0.1">
+            <a-animation attribute="position" to="0.1 1.50 0" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //rightArm
+        
+        //DancingAudienceCharacter1
+        <a-box color="#13A" position="0 0.25 -3" scale="0.1 0.5 0.1">
+            <a-animation attribute="position" to="0 0.40 -3" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //leftLeg
+        
+        <a-box color="#13A" position="0.3 0.25 -3" scale="0.1 0.5 0.1">
+            <a-animation attribute="position" to="0.3 0.40 -3" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //rightLeg
+        
+        <a-box color="#13A" position="0.15 0.6 -3" scale="0.4 0.2 0.1">
+            <a-animation attribute="position" to="0.15 0.75 -3" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //groin
+        
+        <a-box color="#AAA" position="0.15 0.95 -3" scale="0.4 0.5 0.1">
+            <a-animation attribute="position" to="0.15 1.1 -3" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //torso
+        
+        <a-box color="#AAA" position="0.15 1.25 -3" scale="0.1 0.1 0.1">
+            <a-animation attribute="position" to="0.15 1.40 -3" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //neck
+        
+        <a-box color="#AAA" position="0.15 1.35 -3" scale="0.3 0.2 0.1">
+            <a-animation attribute="position" to="0.15 1.5 -3" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //head
+        
+        <a-box color="#AAA" position="0.4 1.35 -3" scale="0.1 0.4 0.1">
+            <a-animation attribute="position" to="0.4 1.5 -3" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //leftArm
+        
+        <a-box color="#AAA" position="-0.1 1.35 -3" scale="0.1 0.4 0.1">
+            <a-animation attribute="position" to="-0.1 1.5 -3" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //rightArm
+        
+        //DancingAudienceCharacter2
+        <a-box color="#13A" position="1 0.25 -3" scale="0.1 0.5 0.1">
+            <a-animation attribute="position" to="1 0.40 -3" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //leftLeg
+        
+        <a-box color="#13A" position="1.3 0.25 -3" scale="0.1 0.5 0.1">
+            <a-animation attribute="position" to="1.3 0.40 -3" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //rightLeg
+        
+        <a-box color="#13A" position="1.15 0.6 -3" scale="0.4 0.2 0.1">
+            <a-animation attribute="position" to="1.15 0.75 -3" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //groin
+        
+        <a-box color="#AAA" position="1.15 0.95 -3" scale="0.4 0.5 0.1">
+            <a-animation attribute="position" to="1.15 1.1 -3" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //torso
+        
+        <a-box color="#AAA" position="1.15 1.25 -3" scale="0.1 0.1 0.1">
+            <a-animation attribute="position" to="1.15 1.40 -3" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //neck
+        
+        <a-box color="#AAA" position="1.15 1.35 -3" scale="0.3 0.2 0.1">
+            <a-animation attribute="position" to="1.15 1.5 -3" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //head
+        
+        <a-box color="#AAA" position="1.4 1.35 -3" scale="0.1 0.4 0.1">
+            <a-animation attribute="position" to="1.4 1.5 -3" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //leftArm
+        
+        <a-box color="#AAA" position="0.9 1.35 -3" scale="0.1 0.4 0.1">
+            <a-animation attribute="position" to="0.9 1.5 -3" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //rightArm
+        
+        //DancingAudienceCharacter3
+        <a-box color="#13A" position="-1 0.25 -3" scale="0.1 0.5 0.1">
+            <a-animation attribute="position" to="-1 0.40 -3" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //leftLeg
+        
+        <a-box color="#13A" position="-1.3 0.25 -3" scale="0.1 0.5 0.1">
+            <a-animation attribute="position" to="-1.3 0.40 -3" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //rightLeg
+        
+        <a-box color="#13A" position="-1.15 0.6 -3" scale="0.4 0.2 0.1">
+            <a-animation attribute="position" to="-1.15 0.75 -3" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //groin
+        
+        <a-box color="#AAA" position="-1.15 0.95 -3" scale="0.4 0.5 0.1">
+            <a-animation attribute="position" to="-1.15 1.1 -3" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //torso
+        
+        <a-box color="#AAA" position="-1.15 1.25 -3" scale="0.1 0.1 0.1">
+            <a-animation attribute="position" to="-1.15 1.40 -3" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //neck
+        
+        <a-box color="#AAA" position="-1.15 1.35 -3" scale="0.3 0.2 0.1">
+            <a-animation attribute="position" to="-1.15 1.5 -3" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //head
+        
+        <a-box color="#AAA" position="-1.4 1.35 -3" scale="0.1 0.4 0.1">
+            <a-animation attribute="position" to="-1.4 1.5 -3" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //leftArm
+        
+        <a-box color="#AAA" position="-0.9 1.35 -3" scale="0.1 0.4 0.1">
+            <a-animation attribute="position" to="-0.9 1.5 -3" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //rightArm
+        
+        //DancingAudienceCharacter4
+        <a-box color="#13A" position="-2 0.25 -4" scale="0.1 0.5 0.1">
+            <a-animation attribute="position" to="-2 0.40 -4" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //leftLeg
+        
+        <a-box color="#13A" position="-2.3 0.25 -4" scale="0.1 0.5 0.1">
+            <a-animation attribute="position" to="-2.3 0.40 -4" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //rightLeg
+        
+        <a-box color="#13A" position="-2.15 0.6 -4" scale="0.4 0.2 0.1">
+            <a-animation attribute="position" to="-2.15 0.75 -4" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //groin
+        
+        <a-box color="#AAA" position="-2.15 0.95 -4" scale="0.4 0.5 0.1">
+            <a-animation attribute="position" to="-2.15 1.1 -4" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //torso
+        
+        <a-box color="#AAA" position="-2.15 1.25 -4" scale="0.1 0.1 0.1">
+            <a-animation attribute="position" to="-2.15 1.40 -4" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //neck
+        
+        <a-box color="#AAA" position="-2.15 1.35 -4" scale="0.3 0.2 0.1">
+            <a-animation attribute="position" to="-2.15 1.5 -4" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //head
+        
+        <a-box color="#AAA" position="-2.4 1.35 -4" scale="0.1 0.4 0.1">
+            <a-animation attribute="position" to="-2.4 1.5 -4" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //leftArm
+        
+        <a-box color="#AAA" position="-1.9 1.35 -4" scale="0.1 0.4 0.1">
+            <a-animation attribute="position" to="-1.9 1.5 -4" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //rightArm
+        
+        //DancingAudienceCharacter5
+        <a-box color="#13A" position="-2 0.25 -3" scale="0.1 0.5 0.1">
+            <a-animation attribute="position" to="-2 0.40 -3" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //leftLeg
+        
+        <a-box color="#13A" position="-2.3 0.25 -3" scale="0.1 0.5 0.1">
+            <a-animation attribute="position" to="-2.3 0.40 -3" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //rightLeg
+        
+        <a-box color="#13A" position="-2.15 0.6 -3" scale="0.4 0.2 0.1">
+            <a-animation attribute="position" to="-2.15 0.75 -3" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //groin
+        
+        <a-box color="#AAA" position="-2.15 0.95 -3" scale="0.4 0.5 0.1">
+            <a-animation attribute="position" to="-2.15 1.1 -3" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //torso
+        
+        <a-box color="#AAA" position="-2.15 1.25 -3" scale="0.1 0.1 0.1">
+            <a-animation attribute="position" to="-2.15 1.40 -3" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //neck
+        
+        <a-box color="#AAA" position="-2.15 1.35 -3" scale="0.3 0.2 0.1">
+            <a-animation attribute="position" to="-2.15 1.5 -3" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //head
+        
+        <a-box color="#AAA" position="-2.4 1.35 -3" scale="0.1 0.4 0.1">
+            <a-animation attribute="position" to="-2.4 1.5 -3" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //leftArm
+        
+        <a-box color="#AAA" position="-1.9 1.35 -3" scale="0.1 0.4 0.1">
+            <a-animation attribute="position" to="-1.9 1.5 -3" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //rightArm
+        
+        //DancingAudienceCharacter6
+        <a-box color="#069" position="0 0.25 -4" scale="0.1 0.5 0.1">
+            <a-animation attribute="position" to="0 0.40 -4" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //leftLeg
+        
+        <a-box color="#069" position="0.3 0.25 -4" scale="0.1 0.5 0.1">
+            <a-animation attribute="position" to="0.3 0.40 -4" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //rightLeg
+        
+        <a-box color="#069" position="0.15 0.6 -4" scale="0.4 0.2 0.1">
+            <a-animation attribute="position" to="0.15 0.75 -4" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //groin
+        
+        <a-box color="#AAA" position="0.15 0.95 -4" scale="0.4 0.5 0.1">
+            <a-animation attribute="position" to="0.15 1.1 -4" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //torso
+        
+        <a-box color="#AAA" position="0.15 1.25 -4" scale="0.1 0.1 0.1">
+            <a-animation attribute="position" to="0.15 1.40 -4" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //neck
+        
+        <a-box color="#AAA" position="0.15 1.35 -4" scale="0.3 0.2 0.1">
+            <a-animation attribute="position" to="0.15 1.5 -4" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //head
+        
+        <a-box color="#AAA" position="0.4 1.35 -4" scale="0.1 0.4 0.1">
+            <a-animation attribute="position" to="0.4 1.5 -4" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //leftArm
+        
+        <a-box color="#AAA" position="-0.1 1.35 -4" scale="0.1 0.4 0.1">
+            <a-animation attribute="position" to="-0.1 1.5 -4" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //rightArm
+        
+        //DancingAudienceCharacter7
+        <a-box color="#13A" position="1 0.25 -4" scale="0.1 0.5 0.1">
+            <a-animation attribute="position" to="1 0.40 -4" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //leftLeg
+        
+        <a-box color="#13A" position="1.3 0.25 -4" scale="0.1 0.5 0.1">
+            <a-animation attribute="position" to="1.3 0.40 -4" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //rightLeg
+        
+        <a-box color="#13A" position="1.15 0.6 -4" scale="0.4 0.2 0.1">
+            <a-animation attribute="position" to="1.15 0.75 -4" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //groin
+        
+        <a-box color="#AAA" position="1.15 0.95 -4" scale="0.4 0.5 0.1">
+            <a-animation attribute="position" to="1.15 1.1 -4" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //torso
+        
+        <a-box color="#AAA" position="1.15 1.25 -4" scale="0.1 0.1 0.1">
+            <a-animation attribute="position" to="1.15 1.40 -4" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //neck
+        
+        <a-box color="#AAA" position="1.15 1.35 -4" scale="0.3 0.2 0.1">
+            <a-animation attribute="position" to="1.15 1.5 -4" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //head
+        
+        <a-box color="#AAA" position="1.4 1.35 -4" scale="0.1 0.4 0.1">
+            <a-animation attribute="position" to="1.4 1.5 -4" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //leftArm
+        
+        <a-box color="#AAA" position="0.9 1.35 -4" scale="0.1 0.4 0.1">
+            <a-animation attribute="position" to="0.9 1.5 -4" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //rightArm
+        
+        //DancingAudienceCharacter8
+        <a-box color="#05A" position="-1 0.25 -4" scale="0.1 0.5 0.1">
+            <a-animation attribute="position" to="-1 0.40 -4" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //leftLeg
+        
+        <a-box color="#05A" position="-1.3 0.25 -4" scale="0.1 0.5 0.1">
+            <a-animation attribute="position" to="-1.3 0.40 -4" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //rightLeg
+        
+        <a-box color="#05A" position="-1.15 0.6 -4" scale="0.4 0.2 0.1">
+            <a-animation attribute="position" to="-1.15 0.75 -4" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //groin
+        
+        <a-box color="#AAA" position="-1.15 0.95 -4" scale="0.4 0.5 0.1">
+            <a-animation attribute="position" to="-1.15 1.1 -4" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //torso
+        
+        <a-box color="#AAA" position="-1.15 1.25 -4" scale="0.1 0.1 0.1">
+            <a-animation attribute="position" to="-1.15 1.40 -4" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //neck
+        
+        <a-box color="#AAA" position="-1.15 1.35 -4" scale="0.3 0.2 0.1">
+            <a-animation attribute="position" to="-1.15 1.5 -4" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //head
+        
+        <a-box color="#AAA" position="-1.4 1.35 -4" scale="0.1 0.4 0.1">
+            <a-animation attribute="position" to="-1.4 1.5 -4" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //leftArm
+        
+        <a-box color="#AAA" position="-0.9 1.35 -4" scale="0.1 0.4 0.1">
+            <a-animation attribute="position" to="-0.9 1.5 -4" direction="alternate" dur="234.375" repeat="indefinite"></a-animation>
+        </a-box> //rightArm
+    </a-scene>
+  </body>
+</html>
